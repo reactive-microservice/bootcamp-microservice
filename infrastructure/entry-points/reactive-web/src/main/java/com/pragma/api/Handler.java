@@ -33,7 +33,7 @@ public class Handler {
         Boolean asc = Boolean.valueOf(request.pathVariable("asc"));
         Boolean orderByCapSize = Boolean.valueOf(request.pathVariable("orderByCapSize"));
 
-        return ServerResponse.ok().body(findAllBootcampsUseCase.action(page, size, asc), Bootcamp.class);
+        return ServerResponse.ok().body(findAllBootcampsUseCase.action(page, size, asc, orderByCapSize), Bootcamp.class);
     }
 
 }
